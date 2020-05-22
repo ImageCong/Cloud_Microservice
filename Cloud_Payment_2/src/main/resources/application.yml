@@ -7,10 +7,10 @@ spring:
     name: cloud-payment-service       # 服务名
   # 数据源定义
   datasource:
-    username: root
-    password: root
+    username: 
+    password: 
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/cloud_microservice_study?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT&useSSL=false
+    url: 
     type: com.alibaba.druid.pool.DruidDataSource
 
 # mybatis配置
