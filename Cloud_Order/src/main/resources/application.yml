@@ -1,0 +1,17 @@
+server:
+  port: 7002
+
+spring:
+  application:
+    name: cloud-order-consumer       # 服务名
+
+
+eureka:
+  instance:
+    instance-id: order-consumer
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka,http://127.0.0.1:8762/eureka

@@ -1,0 +1,20 @@
+server:
+  port: 7070
+
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      defaultZone:  http://127.0.0.1:8761/eureka,http://127.0.0.1:8762/eureka
+
+
+ribbon:
+  ReadTimeout: 5000   # 处理请求的超时时间，默认1秒
+  ConnectTimeout: 5000  # 连接建立的超时时长，默认1秒
+  NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+
+logging:
+  level:
+    com.microservice.client.PaymentFeignClient: debug
+
+

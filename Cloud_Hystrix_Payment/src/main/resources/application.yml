@@ -1,0 +1,30 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    name: cloud-payment-service       # 服务名
+  # 数据源定义
+  datasource:
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/cloud_microservice_study?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT&useSSL=false
+    type: com.alibaba.druid.pool.DruidDataSource
+
+# mybatis配置
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.microservice.entities
+
+
+eureka:
+  instance:
+    instance-id: payment-hystrix-service
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka,http://127.0.0.1:8762/eureka
+

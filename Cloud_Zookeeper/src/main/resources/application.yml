@@ -1,0 +1,10 @@
+server:
+  port: 2181
+
+
+spring:
+  application:
+    name: cloud-service-provider
+  cloud:
+    zookeeper:
+      connect-string: 123.57.35.204:2181
