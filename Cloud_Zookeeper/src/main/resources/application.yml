@@ -1,5 +1,5 @@
 server:
-  port: 2181
+  port: 
 
 
 spring:
@@ -7,4 +7,4 @@ spring:
     name: cloud-service-provider
   cloud:
     zookeeper:
-      connect-string: 123.57.35.204:2181
+      connect-string: 
